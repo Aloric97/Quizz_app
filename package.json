@@ -1,0 +1,33 @@
+{
+  "name": "quizz_app",
+  "version": "1.0.0",
+  "description": "I will create an application related to questions and answers",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aloric97/Quizz_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aloric97/Quizz_app/issues"
+  },
+  "homepage": "https://github.com/Aloric97/Quizz_app#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.0.1",
+    "sequelize": "^6.28.0"
+  }
+}
