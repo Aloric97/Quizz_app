@@ -42,6 +42,8 @@ const user = database.define('user',{
     }},{ timestamps: false }
 )
 
+
+
 //relationships 1 to many, of user and rol
 rol.hasMany(user)
 user.belongsTo(rol)

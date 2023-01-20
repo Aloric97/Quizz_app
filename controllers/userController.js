@@ -131,22 +131,32 @@ const login =async (req, res) => {
     if(!bcrypt.compareSync(password, checkUser.password)){
      return res.status(401).json({ message: 'Authentication failed. Invalid password' });
     }
+
+    const user = await User.findOne(
+        {attributes: ['firstName', 'lastName','email','rolID'], where: { email}})
  
     const token=jwt.sign(
-        {email:checkUser.email,id:checkUser.id,rol_id:checkUser.rolId},
+        {user:user}, 
         TOKEN_KEY,
         {expiresIn:EXPIRES}
     )
      
      return res
-     .cookie("access_token",token,{httpOnly:true})
+     .cookie("auth-cookie",token,{ maxAge: 2 * 60 * 60 * 1000, httpOnly: true} ) //expire 2 hours
      .status(201).json({
          success: true,
-         message: 'Authentication successful'
+         message: 'Authentication successful',
+         accessToken:token
          
      }) 
- }
-;
+}
+
+const perfilUser= (req,res)=>{
+    const token = req.cookies.auth-cookie;
+    const user = jwt.verify(token, TOKEN_KEY).user;
+    res.status(200).json({user})
+}
+
 
 
 
@@ -156,5 +166,6 @@ module.exports={
     createUser,
     deleteUser,
     updateUser,
-    login
+    login,
+    perfilUser
 }

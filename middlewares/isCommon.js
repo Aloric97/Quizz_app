@@ -8,7 +8,7 @@ const isCommon = async (req, res, next) => {
       const token = req.cookies.access_token;
       const user = jwt.verify(token, TOKEN_KEY);
 
-      const roles = await rol.findOne({where:{id: user.rol_id}});
+      const roles = await rol.findOne({where:{id: user.rolID}});
       
       if (roles.name === "admin") {
         next();

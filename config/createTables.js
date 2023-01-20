@@ -1,6 +1,8 @@
 const user = require('../models/User')
 const rol = require('../models/Rol')
-
+const category = require('../models/category')
+const question = require('../models/question')
+const option = require('../models/option')
 
 const {createTable}= require('./database')
 const {createRoles} = require('./defaultRoles')
