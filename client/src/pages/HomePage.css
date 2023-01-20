@@ -1,0 +1,44 @@
+.home {
+    background-repeat: repeat;
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.img{
+    max-width: 40%;
+    height: auto;
+    padding: 0px;
+    margin: 50px;
+ 
+}
+
+
+
+ .text-on-image {
+   position:fixed;
+   left: 75%;
+   bottom: 50%
+}  
+
+.head-text {
+    display: block;
+    justify-content:center
+}
+
+.button{
+    width: 250px;
+    height: 100px;
+    display:inline-block;
+    
+    }
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+button{
+    display:block;
+    margin:0.4em auto;
+}
+}
+

@@ -1,0 +1,40 @@
+.container-game{
+
+    margin: 100px 0 150px;
+    justify-content:center;
+    display: inline-block;
+
+
+}
+
+.loading-game{
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    margin: 40px;
+    padding: 25px 2px 0 100px;
+    grid-gap: 50px 50px;
+
+}
+
+@media (max-width: 900px) {
+    .loading-game { grid-template-columns: repeat(1, 10rem); }
+  }
+
+.btn-submit{
+    height: 70px;
+    width:250px;
+}
+
+@media (max-width: 900px) {
+    .btn-submit{
+        margin-right:100px;
+        height: 70px;
+        width:100px;
+    }
+}
+
+
+
+.error-load{
+    margin: 250px;
+}

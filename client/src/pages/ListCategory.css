@@ -1,0 +1,19 @@
+.card{
+    margin:25qpx;
+}
+
+.table-category{
+    display: inline-block;
+    width: 65%;
+}
+
+.action-category{
+    display: flex;
+    justify-content:space-around
+}
+
+
+.divbtn{
+    width: 45%;
+
+}
